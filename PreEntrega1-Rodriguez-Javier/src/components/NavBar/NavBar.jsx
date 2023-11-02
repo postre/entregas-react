@@ -25,27 +25,27 @@ export const NavBar = () => {
 
             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li>
-                <a href="/category/smartphones" className="nav-link px-2 text-white">
+                <a href="#" className="nav-link px-2 text-white">
                   Celulares
                 </a>
               </li>
               <li>
-                <a href="/category/laptops" className="nav-link px-2 text-white">
+                <a href="#" className="nav-link px-2 text-white">
                   Notebooks
                 </a>
               </li>
               <li>
-                <a href="/category/fragrances" className="nav-link px-2 text-white">
+                <a href="#" className="nav-link px-2 text-white">
                   Perfumes
                 </a>
               </li>
               <li>
-                <a href="/category/skincare" className="nav-link px-2 text-white">
+                <a href="#" className="nav-link px-2 text-white">
                   Cosmetica
                 </a>
               </li>
               <li>
-                <a href="/category/furniture" className="nav-link px-2 text-white">
+                <a href="#" className="nav-link px-2 text-white">
                   Muebles
                 </a>
               </li>
