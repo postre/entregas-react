@@ -11,15 +11,19 @@ export const ItemListContainer = ({ greetings = [] }) => {
 
   useEffect(() => {
     setIsLoading(true);
-    getCategory(categoryId )
+    
+    if(categoryId) {
+      getCategory(categoryId )
       .then((response) => { 
         setCategory(response);
        })
       .catch((error) => console.log(error));
-    
+    }else{
+      setCategory(undefined);
+    }
 
-
-    getProducts({ categoryId })
+  
+    getProducts({ category:categoryId })
       .then((response) => {
         setIsLoading(false); // Usamos el operado not para cambiar el valor del estado a la inversa del actual
         // Guardamos los productos recibidos en el estado para mostrar luego en el DOM
@@ -34,7 +38,8 @@ export const ItemListContainer = ({ greetings = [] }) => {
       {isLoading ? <Loader isLoading={isLoading} /> : ""}
       {greetings.length ? <Slider greetings={greetings} /> : ""}
       <div className="container mb-5">
-      <h3 className="mt-4">{category.name}</h3>
+      {category!=undefined ? <h3 className="mt-4">{category.name}</h3> : ""}
+      
         <div className="row cart d-flex align-items-stretch">
           {products.map((product) => (
             <ItemList product={product} key={product.id} />
