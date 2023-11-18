@@ -2,7 +2,7 @@ import { SliderItem } from "../../components";
 
 export const Slider = ({ greetings }) => {
   return (
-    <>
+    <div className="container mb-5">
       <div
         id="sliderId"
         className="carousel slide"
@@ -17,6 +17,6 @@ export const Slider = ({ greetings }) => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };

@@ -1,31 +1,37 @@
-import { NavBar, ItemListContainer } from "./components";
+import { useEffect, useState } from "react";
+import { NavBar, ItemListContainer, ItemDetail, Cart } from "./components";
+import { getSlider } from "./mocks";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 function App() {
-  const greetings = [
-    {
-      title: "Lorem ipsum dolor sit amet",
-      detail:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
-      img: "slider1.jpg",
-    },
-    {
-      title: "Excepteur sint occaecat cupidatat",
-      detail:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        img: "slider2.jpg",
-    },
-    {
-      title: "Nemo enim ipsam voluptatem",
-      detail:
-        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.",
-        img: "slider3.jpg",
-    },
-  ];
+
+  const [sliders, setSliders] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    getSlider()
+      .then((response) => {
+            setIsLoading(!isLoading); // Usamos el operado not para cambiar el valor del estado a la inversa del actual
+            // Guardamos los productos recibidos en el estado para mostrar luego en el DOM
+            setSliders(response);        
+      })
+      .catch((error) => console.log(error));
+  }, []);
   return (
     <>
+     <BrowserRouter>
       <NavBar />
-      <ItemListContainer greetings={greetings} />
+      <Routes>
+        <Route path="/" element={<ItemListContainer greetings={sliders} isLoading={isLoading} />} />
+        <Route path="/products" element={<ItemListContainer isLoading={isLoading} />} />
+        <Route path="/products/:categoryId" element={<ItemListContainer />} />
+        <Route path="/product/:id" element={<ItemDetail />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </BrowserRouter>
+      {/* <NavBar />
+      <ItemListContainer greetings={sliders} isLoading={isLoading} /> */}
     </>
   );
 }
