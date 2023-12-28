@@ -65,3 +65,4 @@ https://github.com/postre/entregas-react/tree/main/EntregaFinal-Rodriguez-Javier
 ## Agradecimientos
 - Muchas Gracias a Sofi, mi tutora, por sus respuestas y acompañamiento
 - Muchas Gracias a Luis, el profe, por: el tiempo; la claridad; los consejos; y por sobre todo la buena onda.
+- Muchas Gracias a ChatGPT, por la descripcion del proyecto.
