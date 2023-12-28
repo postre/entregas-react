@@ -37,6 +37,7 @@ https://github.com/postre/entregas-react/tree/main/EntregaFinal-Rodriguez-Javier
 - Firebase
 - Bootstrap
 - GIT
+- ChatGPT
 
 ## Librerias usadas
 - firebase : ^10.7.0 : https://firebase.google.com/docs/web/setup?hl=es-419
