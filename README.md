@@ -20,6 +20,14 @@ Bienvenido a nuestra plataforma de comercio electrónico de vanguardia, respalda
 ## Demo online
 https://entrega-final-javier-rodriguez.netlify.app/
 
+## Datos de prueba
+**Usuario con varios pedidos**
+- Usuario: jrodriguezgbk@gmail.com
+- Contraseña: Test123$
+
+**Registro y login de usuarios**
+pueden registrarse con usuario, contraseña y nombre. 
+
 ## Link al repositorio
 https://github.com/postre/entregas-react/tree/main/EntregaFinal-Rodriguez-Javier
 
