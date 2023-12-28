@@ -50,8 +50,9 @@ https://github.com/postre/entregas-react/tree/main/EntregaFinal-Rodriguez-Javier
 - sweetalert2-react-content : ^5.0.7 : https://sweetalert2.github.io/recipe-gallery/sweetalert2-react.html
 
 ## Consideraciones 
-- como no uso styled components, me resulto mas comodo no hacer una carpeta por componente.
-- decidí utilizar modelos para formatear los objetos, esto me fue de ayuda a lo largo del curso, ya que como use varias APIs, mocks y por ultimo Firebase, me fue de utilidad a la hora de cambiar las fuentes.
+- Como no uso styled components, me resulto mas comodo no hacer una carpeta por componente.
+- Decidí utilizar modelos para formatear los objetos, esto me fue de ayuda a lo largo del curso, ya que como use varias APIs, mocks y por ultimo Firebase, me fue de utilidad a la hora de cambiar las fuentes.
+- Luego de agregar un producto al carro, si se quieren agregar mas, le puse actualizar en lugar de agregar, y es por esto que no se suman, esta hecho a proposito, ya que esa logica me gusta mas que la de sumar.
 
 ## Agradecimientos
 - Muchas Gracias a Sofi, mi tutora, por sus respuestas y acompañamiento
